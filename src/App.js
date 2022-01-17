@@ -18,15 +18,12 @@ import "./normalize.css";
 import "./styles.css";
 import { wait } from '@testing-library/user-event/dist/utils';
 
-try {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-} catch (error) {
-  alert("Please Install Metamask.");
-  const provider = undefined;
-}
+
+
 
 function App() {
 
+  const [provider, setProvider] = useState(undefined);
   const [connected, setConnected] = useState(false);
   const [account, setAccount] = useState(undefined);
   const [signer, setSigner] = useState(undefined);
@@ -98,18 +95,24 @@ function App() {
 
   const login = async () => {
     try {
-      let newAccount = await window.ethereum.request({ method: 'eth_requestAccounts' });
-      let newSigner = await provider.getSigner();
-      let newAccountBalance = await provider.getBalance(newAccount[0]);
-      let newContractBalance = await provider.getBalance(CONTRACT_ADDRESS);
-      let newContract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, newSigner);
-      let newAccountStoredBalance = await newContract.getBalanceOf(newAccount[0]);
-      setAccount(newAccount);
-      setSigner(newSigner);
-      setAccountBalance(ethers.utils.formatEther(newAccountBalance));
-      setContractBalance(ethers.utils.formatEther(newContractBalance));
-      setAccountStoredBalance(ethers.utils.formatEther(newAccountStoredBalance));
-      setContract(newContract);
+      let newProvider = new ethers.providers.Web3Provider(window.ethereum);
+      if(newProvider != undefined) {
+        let newAccount = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        let newSigner = await newProvider.getSigner();
+        let newAccountBalance = await newProvider.getBalance(newAccount[0]);
+        let newContractBalance = await newProvider.getBalance(CONTRACT_ADDRESS);
+        let newContract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, newSigner);
+        let newAccountStoredBalance = await newContract.getBalanceOf(newAccount[0]);
+        setProvider(newProvider);
+        setAccount(newAccount);
+        setSigner(newSigner);
+        setAccountBalance(ethers.utils.formatEther(newAccountBalance));
+        setContractBalance(ethers.utils.formatEther(newContractBalance));
+        setAccountStoredBalance(ethers.utils.formatEther(newAccountStoredBalance));
+        setContract(newContract);
+      } else {
+        alert("Please Install Metamask.");
+      }
     } catch (error) {
       console.log(error);
     }
