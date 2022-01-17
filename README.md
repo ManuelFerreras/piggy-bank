@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Aplicación creada con: Html5, CSS3, Node.js, React, Ethers.js, y Solidity.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Funciona sobre la red de prueba de Rinkeby.
 
-## Available Scripts
+Address del contrato: 0x32190860Ee8bb9541a41B459e7BBf2D0Ba021F83
 
-In the project directory, you can run:
+Web Hosteada: https://piggy-bank-wa.herokuapp.com/
 
-### `npm start`
+En caso de querer ejecutarla en servidor local utilizar:
+ - npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Guia de Uso:
 
-### `npm test`
+1- Instalar Metamask y Habilitar las Redes de Prueba.
+2- Seleccionar la red de Rinkeby y Conectarse al Sitio.
+3- Para almacenar Eth en el Piggy se puede hacer uso del apartado "Store Ether" o enviar Ether directamente al contrato mediante el address.
+4- Para retirar Eth del piggy se puede hacer uso del apartado "Withdraw Ether".
+5- Para Depositar un token ERC20, se puede hacer uso del apartado "Store Token", indicando el address del token y la cantidad.
+6- Para retirar un token ERC20, se puede hacer uso del apartado "Witdraw Token", indicando el address del token y la cantidad.
+7- El smart contract cuenta con una funcion que devuelve los tokens ERC20 que cada usuario ha depositado con sus respectivos balances.
+8- Para enviar un mail al dev, se puede hacer uso del apartado "Contact Me".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Manuel Ferreras
