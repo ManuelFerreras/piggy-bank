@@ -22,6 +22,7 @@ try {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
 } catch (error) {
   alert("Please Install Metamask.");
+  const provider = undefined;
 }
 
 function App() {
