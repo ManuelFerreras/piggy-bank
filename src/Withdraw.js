@@ -41,11 +41,13 @@ export default ({ withdrawFunds, login, connected, setConnected, accountBalance,
 
                     <div className="input-group">
                         <label htmlFor="amountStore">Amount of Ether to Withdraw</label>
-                        <input className="amountStore" placeholder="0 Ether" defaultValue={0} onChange={e => changedValue(e)} />
-                        <button id="inputValue" className='btn btn-success' onClick={() => {
-                            const inputObj = document.querySelector('input');
-                            withdrawFunds(inputObj.value);
-                        }}>Withdraw</button>
+                        <div className="input-group">
+                            <input className="amountStore" placeholder="0 Ether" defaultValue={0} onChange={e => changedValue(e)} />
+                            <button id="inputValue" className='btn btn-success' onClick={() => {
+                                const inputObj = document.querySelector('input');
+                                withdrawFunds(inputObj.value);
+                            }}>Withdraw</button>
+                        </div>
                     </div>
                     
                 </div>

@@ -238,3 +238,15 @@ img {
     width: auto;
     border-radius: 25px;
 }
+
+.erc { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.erc input {
+    max-width: 80%;
+    border-radius: 25px !important;
+}

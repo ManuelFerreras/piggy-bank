@@ -41,11 +41,13 @@ export default ({ storeFunds, login, connected, setConnected, accountBalance, co
 
                     <div className="input-group">
                         <label htmlFor="amountStore">Amount of Ether to Store</label>
-                        <input className="amountStore" placeholder="0 Ether" defaultValue={0} onChange={e => changedValue(e)} />
-                        <button id="inputValue" className='btn btn-success' onClick={() => {
-                            const inputObj = document.querySelector('input');
-                            storeFunds(inputObj.value);
-                        }}>Store</button>
+                        <div className="input-group">
+                            <input className="amountStore" placeholder="0 Ether" defaultValue={0} onChange={e => changedValue(e)} />
+                            <button id="inputValue" className='btn btn-success' onClick={() => {
+                                const inputObj = document.querySelector('input');
+                                storeFunds(inputObj.value);
+                            }}>Store</button>
+                        </div>
                     </div>
                     
                 </div>
