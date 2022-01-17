@@ -18,7 +18,11 @@ import "./normalize.css";
 import "./styles.css";
 import { wait } from '@testing-library/user-event/dist/utils';
 
-const provider = new ethers.providers.Web3Provider(window.ethereum);
+try {
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+} catch (error) {
+  alert("Please Install Metamask.");
+}
 
 function App() {
 
